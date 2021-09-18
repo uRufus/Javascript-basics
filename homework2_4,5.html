@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function sumNumbers (firstNumber, secondNumber) {
+            return firstNumber + secondNumber         
+        }
+        function subNumbers (firstNumber, secondNumber) {
+            return firstNumber - secondNumber         
+        }
+        function mulNumbers (firstNumber, secondNumber) {
+            return firstNumber * secondNumber         
+        }
+        function divNumbers (firstNumber, secondNumber) {
+            return firstNumber / secondNumber         
+        }
+        function mathOperation(arg1, arg2, operation){
+            switch (operation) {
+                case '+':
+                    return sumNumbers(arg1, arg2);
+                case '-':
+                    return subNumbers(arg1, arg2);
+                case '*':
+                    return mulNumbers(arg1, arg2);
+                case '/':
+                   return divNumbers(arg1, arg2);
+            default:
+                return `Вы ввели неккоректное значение ${operation}.`;
+                }
+        }
+        let firstNumber = Number(prompt("Введите первое число"));
+        let secondNumber = Number(prompt("Введите второе число"));
+        let param = prompt("Введите операцию +, -, *, /");
+        alert(mathOperation(firstNumber, secondNumber, param));
+    </script>
+</body>
+</html>

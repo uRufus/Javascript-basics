@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function workWithNumbers (firstNumber, secondNumber) {
+            let result = 0
+            if (firstNumber >= 0 && secondNumber >= 0)
+            {
+                result = firstNumber - secondNumber
+            }
+            else if (firstNumber < 0 && secondNumber < 0) {
+                result = firstNumber * secondNumber
+            }
+            else if ((firstNumber < 0 && secondNumber >= 0) || (firstNumber >= 0 && secondNumber < 0)) {
+                result = firstNumber + secondNumber
+            }
+            return result;            
+        }
+        let firstNumber = Number(prompt("Введите первое число"));
+        let secondNumber = Number(prompt("Введите второе число"));
+        alert(workWithNumbers(firstNumber, secondNumber));
+    </script>
+</body>
+</html>
